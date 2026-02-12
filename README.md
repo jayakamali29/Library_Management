@@ -1,105 +1,75 @@
-# 📚 Library Management System
+📚 Library Management System (Servlet + JDBC)
 
-A functional **Library Management System** web application built using **HTML, CSS, and JavaScript**.  
-It provides a digital interface for users to catalog books, track borrowing status, and manage a collection in real-time within the browser.
+A web-based Library Management System developed using Java Servlets, JDBC, and DAO architecture.
+The application allows administrators to manage books and authors with database-backed storage and server-side processing.
 
----
+✨ Features
 
-## ✨ Features
+Add and view books and authors
 
-- **Book Inventory Management**  
-  Add books by entering the title, author, and selecting a genre.
+Database-driven storage (no localStorage)
 
-- **Dynamic Book List**  
-  Table rows are generated dynamically for every new entry without refreshing the page.
+Servlet-based request handling
 
-- **Status Tracking**  
-  - Toggleable status: *Available* ↔ *Borrowed*  
-  - Visual indicators change color based on status.
+DAO pattern for database operations
 
-- **Responsive & Styled Design**  
-  - Clean, modern UI with focus on readability.  
-  - Interactive buttons for deleting entries and updating availability.
+Layered architecture (Bean → DAO → Service → Servlet)
 
-- **Form Validation**  
-  - Prevents empty entries.  
-  - Ensures required fields (Title & Author) are filled before submission.
+Server-side validation and processing
 
----
+🏗 Architecture
+Servlet Layer → Service Layer → DAO Layer → Database
 
-## 📂 Files
+📂 Project Structure
+src/main/java
+ ├── com.kce.book.bean
+ │     ├── AuthorBean.java
+ │     └── BookBean.java
+ │
+ ├── com.kce.book.DAO
+ │     ├── AuthorDAO.java
+ │     └── BookDAO.java
+ │
+ ├── com.kce.book.service
+ │     └── Administrator.java
+ │
+ ├── com.kce.book.servlets
+ │     ├── MainServlet.java
+ │     └── ViewServlet.java
+ │
+ └── com.kce.book.util
+       └── DBUtil.java
 
-### 1. `index.html`
-- Core HTML structure.  
-- Includes:
-  - Heading (`<h1>`) titled *Digital Library Manager*.  
-  - Input section (Title, Author, Genre dropdown).  
-  - "Add Book" button.  
-  - `<table>` to display book collection.
+🛠 Technologies Used
 
-### 2. Inline CSS
-- Defined inside `<style>` block.  
-- Key styles:
-  - Centered layout with professional background.  
-  - Status badges (Green = Available, Red = Borrowed).  
-  - Clean table design with borders, padding, hover effects.  
-  - Responsive widths for mobile & desktop.
+Java Servlets
 
-### 3. Inline JavaScript
-- Defined inside `<script>` block.  
-- Functions:
-  - `addBook()`: Validates form, creates book object, appends row.  
-  - `toggleStatus(button)`: Switches status between *Available* and *Borrowed*.  
-  - `removeBook(button)`: Deletes a book entry.  
-  - `clearFields()`: Resets input fields after adding a book.
+JDBC
 
----
+JSP/HTML (frontend pages)
 
-## 🚀 Usage Instructions
+Apache Tomcat
 
-1. Open `index.html` in a modern web browser.  
-2. Enter **Title** and **Author**.  
-3. Select a **Genre**.  
-4. Click **Add Book** to register it.  
-5. Use the **Status button** to toggle availability.  
-6. Use the **Delete button** to remove a book permanently.
+Oracle / MySQL (via DBUtil)
 
----
+DAO Pattern
 
-## 🛠 Requirements
+⚙️ Requirements
 
-- A modern web browser (Chrome, Firefox, Safari).  
-- JavaScript enabled.  
-- No external databases or servers required (runs entirely client-side).
+Java JDK 11+
 
----
+Apache Tomcat 9+
 
-## 🔧 Customization Ideas
+Eclipse / IntelliJ
 
-- **Persistent Data**: Use `localStorage` to keep books after refresh.  
-- **Search Bar**: Add real-time filtering by title or author.  
-- **Category Icons**: Use icons (e.g., FontAwesome) for genres like Fiction, Science, History.
+Database setup
 
----
+JDBC driver added to project
 
-## ⚠️ Known Limitations
+<img width="767" height="780" alt="image" src="https://github.com/user-attachments/assets/1710d315-a23d-464f-be0f-76fe0d147bde" />
 
-- **Session-Based**: Data is lost on refresh (unless `localStorage` is added).  
-- **No User Accounts**: Local-only tool, no multi-user or cloud sync.
+<img width="758" height="103" alt="image" src="https://github.com/user-attachments/assets/9622f51e-5ce9-4e15-8b99-739332d484dc" />
 
----
-
-## 👨‍💻 Credits
-
-Designed and developed using **HTML5, CSS3, and ES6+ JavaScript**.
-
-<img width="763" height="748" alt="image" src="https://github.com/user-attachments/assets/f9e685ef-c953-45a5-918f-460b711172ca" />
-
-<img width="804" height="124" alt="image" src="https://github.com/user-attachments/assets/f0cfe86e-847b-4200-9347-f6839ad494d4" />
-
-<img width="771" height="780" alt="image" src="https://github.com/user-attachments/assets/dceb851a-d8e8-4eea-848d-73bbefcd6287" />
-
-
-
+<img width="775" height="761" alt="image" src="https://github.com/user-attachments/assets/eedc929e-c0ef-41df-b0ad-3aa996c713ba" />
 
 
