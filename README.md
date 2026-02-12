@@ -92,3 +92,12 @@ It provides a digital interface for users to catalog books, track borrowing stat
 ## 👨‍💻 Credits
 
 Designed and developed using **HTML5, CSS3, and ES6+ JavaScript**.
+
+![WhatsApp Image 2026-02-12 at 9 13 38 AM](https://github.com/user-attachments/assets/1850411e-3bad-428a-966d-313ad494f4f9)
+
+![WhatsApp Image 2026-02-12 at 9 13 43 AM](https://github.com/user-attachments/assets/a461c96c-4836-4183-82ca-fbc662f3abe0)
+
+![WhatsApp Image 2026-02-12 at 9 13 54 AM](https://github.com/user-attachments/assets/c14cad7f-a53c-48fa-9af9-30f20396332c)
+
+
+
